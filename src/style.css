@@ -5,7 +5,7 @@
     }
   }
 
-.pantalla{
+.screen{
     
     margin-left: auto;
     margin-right: auto;
@@ -13,14 +13,14 @@
 
 } 
 
-.titulo{
+.title{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     padding: 10px;
 }
 
-.descripcion{
+.description{
     width: 472px;
     height: 129px;
     margin-left: auto;
@@ -29,7 +29,7 @@
     border-radius: 10px 10px 0px 0px;
 }
 
-.cuerpo{
+.body1{
     width: 472px;
     height: 423px;
     margin-left: auto;
@@ -38,7 +38,7 @@
     border-radius: 0px 0px 10px 10px;
 }
 
-.filtro{
+.filter{
     width: 408px;
     height: 169px;
     margin-left: auto;
@@ -48,7 +48,7 @@
 
 }
 
-.personaje{
+.character{
     width: 408px;
     height: 188px;
     margin-left: auto;
@@ -57,7 +57,7 @@
     border-radius: 10px;
 }
 
-.imagenlogo{
+.imglogo{
 
     width: 100%;
     height: 100%;

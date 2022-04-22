@@ -1,21 +1,20 @@
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
     .titulo {
       width:  300px !important;
     }
-  }
+  } */
 
 .screen{
-    
-    margin-left: auto;
-    margin-right: auto;
     background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 } 
 
 .title{
-    margin-left: auto;
-    margin-right: auto;
     width: 50%;
     padding: 10px;
 }
@@ -23,8 +22,7 @@
 .description{
     width: 472px;
     height: 129px;
-    margin-left: auto;
-    margin-right: auto;
+
     background: #97CE4C;
     border-radius: 10px 10px 0px 0px;
 }
@@ -32,8 +30,10 @@
 .body1{
     width: 472px;
     height: 423px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background: #0099CC;
     border-radius: 0px 0px 10px 10px;
 }
@@ -41,8 +41,6 @@
 .filter{
     width: 408px;
     height: 169px;
-    margin-left: auto;
-    margin-right: auto;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
 
@@ -51,8 +49,6 @@
 .character{
     width: 408px;
     height: 188px;
-    margin-left: auto;
-    margin-right: auto;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
 }

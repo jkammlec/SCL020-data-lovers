@@ -90,8 +90,7 @@ body {
         line-height: 20px;
     }
     #selectcharacter, #selectstatus, #selectgender, #selectspecies {
-        width: 20%;
-        height: 5px;
+        height: 15px;
     }
 }
 @media (min-width: 376px) and (max-width: 768px){
@@ -104,6 +103,6 @@ body {
     }
     #selectcharacter, #selectstatus, #selectgender, #selectspecies {
         width: 20%;
-        height: 10px;
+        height: 20px;
     }
 }

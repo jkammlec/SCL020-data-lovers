@@ -17,7 +17,7 @@ body {
 } 
 
 .title{
-    width: 50%;
+    width: 60%;
     padding: 10px;
 }
 
@@ -27,7 +27,7 @@ body {
     background: #97CE4C;
     border-radius: 10px 10px 0px 0px;
     text-align: center;
-    font-size: medium;
+    font-size: 14px;
 }
 
 .body1{
@@ -42,21 +42,29 @@ body {
 }
 
 .filter{
-    width: 408px;
-    height: 169px;
+    width: 90%;
+    height: 45%;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     margin-bottom: 5%;
     margin-top: 5%;
+}
 
+.form {
+    text-align: center;
+    padding: 5%;
+}
+.divinput {
+    line-height: 30px;
 }
 
 .character{
-    width: 408px;
-    height: 188px;
-    background: rgba(255, 255, 255, 0.8);
+    width: 90%;
+    height: 45%;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     margin-bottom: 5%;
+    margin-top: 5%;
 }
 
 .imglogo{
@@ -71,4 +79,31 @@ body {
     color: white;
     text-align: justify;
 
+}
+
+@media (max-width: 375px) {
+    .resume {
+        font-size: 8px;
+    }
+    .divinput {
+        font-size: 8px;
+        line-height: 15px;
+    }
+    #selectcharacter, #selectstatus, #selectgender, #selectspecies {
+        width: 20%;
+        height: 6px;
+    }
+}
+@media (min-width: 376px) and (max-width: 768px){
+    .resume {
+        font-size: 12px;
+    }
+    .divinput {
+        font-size: 12px;
+        line-height: 25px;
+    }
+    #selectcharacter, #selectstatus, #selectgender, #selectspecies {
+        width: 20%;
+        height: 10px;
+    }
 }

@@ -28,6 +28,7 @@ body {
     border-radius: 10px 10px 0px 0px;
     text-align: center;
     font-size: 14px;
+    box-shadow: inset 0 0 10px gray;
 }
 
 .body1{
@@ -39,6 +40,7 @@ body {
     flex-direction: column;
     background: #0099CC;
     border-radius: 0px 0px 10px 10px;
+    box-shadow: inset 0 0 10px gray;
 }
 
 .filter{
@@ -91,6 +93,7 @@ body {
     }
     #selectcharacter, #selectstatus, #selectgender, #selectspecies {
         height: 15px;
+        width: 20%;
     }
 }
 @media (min-width: 376px) and (max-width: 768px){

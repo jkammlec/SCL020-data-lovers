@@ -1,13 +1,3 @@
-// estas funciones son de ejemplo
-
-// export const example = () => {
-//   return 'example';
-// };
-
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
-
 import data from './data/rickandmorty/rickandmorty.js';
 
 export const rickandmorty = {
@@ -39,7 +29,44 @@ export const rickandmorty = {
       }
     }
     return uniqueSpecies.sort();
-  }
+  },
+
+  getStatus: (gender,species) => {
+    let statusfilter = data.results.filter( //voy a filtrar la informacion que se encuentra en "results" de json en donde.....
+      element =>  element.gender === gender && 
+                  element.species === species // si el genero es exactamente igual al genero y especie seleccionado, tome toda la informacion de ese genero
+    );
+    let status = statusfilter.map(
+      g => g.status
+    );
+
+    let uniqueStatus = [];
+    for(let i=0; i<status.length; i++){
+      if(!uniqueStatus.includes(status[i])){
+        uniqueStatus.push(status[i]);
+      }
+    }
+    return uniqueStatus.sort();
+    },
+
+    getCharacter: (gender,species, status) => {
+      let characterfilter = data.results.filter( //voy a filtrar la informacion que se encuentra en "results" de json en donde.....
+        element =>  element.gender === gender && 
+                    element.species === species &&
+                    element.status === status // si el genero es exactamente igual al genero y especie seleccionado, tome toda la informacion de ese genero
+      );
+      let character = characterfilter.map(
+        g => g.character
+      );
+  
+      let uniqueCharacter = [];
+      for(let i=0; i<character.length; i++){
+        if(!uniqueCharacter.includes(character[i])){
+          uniqueCharacter.push(character[i]);
+        }
+      }
+      return uniqueCharacter.sort();
+      },
 
 
 

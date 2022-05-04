@@ -50,13 +50,18 @@ export const rickandmorty = {
     },
 
     getCharacter: (gender,species, status) => {
-      let characterfilter = data.results.filter( //voy a filtrar la informacion que se encuentra en "results" de json en donde.....
+      let characterfilter = data.results.filter( 
         element =>  element.gender === gender && 
                     element.species === species &&
-                    element.status === status // si el genero es exactamente igual al genero y especie seleccionado, tome toda la informacion de ese genero
+                    element.status === status 
       );
       let character = characterfilter.map(
-        g => g.character
+        g => {
+         return {
+           id: g.id,
+           name: g.name
+         }
+        }
       );
   
       let uniqueCharacter = [];

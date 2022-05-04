@@ -89,6 +89,9 @@ body {
     text-shadow: 2px 2px 2px gray;
 
 }
+#selectcharacter, #selectstatus, #selectgender, #selectspecies {
+    cursor: url('./img/cursor.cur'), auto;
+}
 
 @media (max-width: 375px) {
     body {

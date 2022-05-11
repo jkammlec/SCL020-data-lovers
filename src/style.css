@@ -1,4 +1,3 @@
-
 /* @media screen and (max-width: 480px) {
     .titulo {
       width:  300px !important;
@@ -13,20 +12,17 @@ body {
     background-attachment: fixed;
     cursor: url('./img/cursor.cur'), auto;
 }
-.screen{
+.screen {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-} 
-
-.title{
+}
+.title {
     width: 60%;
     padding: 10px;
 }
-
-.description{
+.description {
     width: 50%;
     height: 100%;
     background: #97CE4C;
@@ -35,8 +31,7 @@ body {
     font-size: 14px;
     box-shadow: inset 0 0 10px gray;
 }
-
-.body1{
+.body1 {
     width: 50%;
     height: 100%;
     display: flex;
@@ -48,7 +43,7 @@ body {
     box-shadow: inset 0 0 10px gray;
 }
 
-.filter{
+.filter {
     width: 90%;
     height: 45%;
     background: rgba(255, 255, 255, 0.8);
@@ -56,7 +51,6 @@ body {
     margin-bottom: 5%;
     margin-top: 5%;
 }
-
 .form {
     text-align: center;
     padding: 5%;
@@ -65,21 +59,10 @@ body {
 .divinput {
     line-height: 30px;
 }
-
-.character{
-    width: 90%;
-    height: 45%;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    margin-bottom: 5%;
-    margin-top: 5%;
-}
-
-.imglogo{
+.imglogo {
     width: 100%;
 }
-
-.resume{
+.resume {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 20px;
@@ -87,8 +70,39 @@ body {
     color: white;
     text-align: justify;
     text-shadow: 2px 2px 2px gray;
+}
+.imagen {
+    width: 30%;
+    display: inline-table;
+    font-size: 15px;
+    width: 200px;
+    height: 200px
+}
+.detailcharacterselectd {
+    width: 90%;
+    height: 45%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.characterimage {
+    margin-top: 5%;
+    margin-left: 5%;
 
 }
+.detail {
+    margin-top: 5%;
+    margin-left: 5%;
+    float: right;
+    display: inline-table;
+    font-size: 15px;
+}
+
+
 #selectcharacter, #selectstatus, #selectgender, #selectspecies {
     cursor: url('./img/cursor.cur'), auto;
 }
@@ -109,14 +123,17 @@ body {
         width: 20%;
     }
 }
-@media (min-width: 376px) and (max-width: 768px){
+
+@media (min-width: 376px) and (max-width: 768px) {
     .resume {
         font-size: 12px;
     }
+
     .divinput {
         font-size: 12px;
         line-height: 25px;
     }
+
     #selectcharacter, #selectstatus, #selectgender, #selectspecies {
         width: 20%;
         height: 20px;

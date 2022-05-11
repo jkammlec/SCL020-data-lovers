@@ -49,7 +49,7 @@ export const rickandmorty = {
     return uniqueStatus.sort();
     },
 
-    getCharacter: (gender,species, status) => {
+    getCharacters: (gender,species, status) => {
       let characterfilter = data.results.filter( 
         element =>  element.gender === gender && 
                     element.species === species &&
@@ -75,24 +75,14 @@ export const rickandmorty = {
 
 
 
+getCharacter: (id) =>{
+  let characterfilter = data.results.filter( 
+    element =>  element.id ==id);
+  debugger;
+    return characterfilter;
 
-
-
-
-
-
-
-
-
-
+}                                                                  
 }
-
-
-
-
-
-
-
 
 // function ObtenerComunasUnicasLargo(){
 //   //obtener una descripción de forma unica

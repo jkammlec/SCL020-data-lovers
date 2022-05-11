@@ -15,78 +15,94 @@ for (let i = 0; i < genders.length; i++) {
 document.getElementById("selectgender").addEventListener('change', () => { //cada vez que cambia el valor del selectgender, ejecuta (change) lo siquiente
     let selectGender = document.getElementById('selectgender'); //obtengo el elemento html con id selectgender
     let genderSelected = selectGender.options[selectGender.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
-    
-    let selectSpecies = document.getElementById('selectspecies'); 
-    let species = rickandmorty.getSpecies(genderSelected); 
-    
+
+    let selectSpecies = document.getElementById('selectspecies');
+    let species = rickandmorty.getSpecies(genderSelected);
+
     selectSpecies.innerHTML = "";
-    let opt = document.createElement('option'); 
-    opt.innerHTML = "Seleccionar Especie"; 
+    let opt = document.createElement('option');
+    opt.innerHTML = "Seleccionar Especie";
     opt.disabled = true;
     opt.selected = true;
-    selectSpecies.appendChild(opt); 
+    selectSpecies.appendChild(opt);
 
     for (let i = 0; i < species.length; i++) {
-        let opt = document.createElement('option'); 
+        let opt = document.createElement('option');
         opt.value = species[i];
-        opt.innerHTML = species[i]; 
-        selectSpecies.appendChild(opt); 
+        opt.innerHTML = species[i];
+        selectSpecies.appendChild(opt);
     }
 });
 
 document.getElementById("selectspecies").addEventListener('change', () => { //cada vez que cambia el valor del selectgender, ejecuta (change) lo siquiente
-    
+
     let selectGender = document.getElementById('selectgender'); //obtengo el elemento html con id selectgender
     let genderSelected = selectGender.options[selectGender.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
 
     let selectSpecies = document.getElementById('selectspecies'); //obtengo el elemento html con id selectgender
     let speciesSelected = selectSpecies.options[selectSpecies.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
 
-    let selectStatus = document.getElementById('selectstatus'); 
-    let status = rickandmorty.getStatus(genderSelected,speciesSelected); 
+    let selectStatus = document.getElementById('selectstatus');
+    let status = rickandmorty.getStatus(genderSelected, speciesSelected);
     selectStatus.innerHTML = "";
 
-    let opt = document.createElement('option'); 
-    opt.innerHTML = "Seleccionar Estado de Vida"; 
+    let opt = document.createElement('option');
+    opt.innerHTML = "Seleccionar Estado de Vida";
     opt.disabled = true;
     opt.selected = true;
-    selectStatus.appendChild(opt); 
+    selectStatus.appendChild(opt);
 
     for (let i = 0; i < status.length; i++) {
-        let opt = document.createElement('option'); 
+        let opt = document.createElement('option');
         opt.value = status[i];
-        opt.innerHTML = status[i]; 
-        selectStatus.appendChild(opt); 
+        opt.innerHTML = status[i];
+        selectStatus.appendChild(opt);
     }
 });
 
 document.getElementById("selectstatus").addEventListener('change', () => { //cada vez que cambia el valor del selectgender, ejecuta (change) lo siquiente
-     
-let selectGender = document.getElementById('selectgender'); //obtengo el elemento html con id selectgender
-let genderSelected = selectGender.options[selectGender.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
 
-let selectSpecies = document.getElementById('selectspecies'); //obtengo el elemento html con id selectgender
-let speciesSelected = selectSpecies.options[selectSpecies.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
+    let selectGender = document.getElementById('selectgender'); //obtengo el elemento html con id selectgender
+    let genderSelected = selectGender.options[selectGender.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
 
-let selectStatus = document.getElementById('selectstatus'); //obtengo el elemento html con id selectgender
-let statusSelected = selectStatus.options[selectStatus.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
+    let selectSpecies = document.getElementById('selectspecies'); //obtengo el elemento html con id selectgender
+    let speciesSelected = selectSpecies.options[selectSpecies.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
+
+    let selectStatus = document.getElementById('selectstatus'); //obtengo el elemento html con id selectgender
+    let statusSelected = selectStatus.options[selectStatus.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
 
 
-let selectCharacter = document.getElementById('selectcharacter'); 
-let character = rickandmorty.getCharacter(genderSelected,speciesSelected,statusSelected); 
+    let selectCharacter = document.getElementById('selectcharacter');
+    let character = rickandmorty.getCharacters(genderSelected, speciesSelected, statusSelected);
 
-selectCharacter.innerHTML = "";
-let opt = document.createElement('option'); 
-opt.innerHTML = "Seleccionar Personaje"; 
-opt.disabled = true;
-opt.selected = true;
-selectCharacter.appendChild(opt); 
-for (let i = 0; i < character.length; i++) {
-    let opt = document.createElement('option'); 
-    opt.value = character[i].id;
-    opt.innerHTML = character[i].name; 
-    selectCharacter.appendChild(opt); 
-}
+    selectCharacter.innerHTML = "";
+    let opt = document.createElement('option');
+    opt.innerHTML = "Seleccionar Personaje";
+    opt.disabled = true;
+    opt.selected = true;
+    selectCharacter.appendChild(opt);
+    for (let i = 0; i < character.length; i++) {
+        let opt = document.createElement('option');
+        opt.value = character[i].id;
+        opt.innerHTML = character[i].name;
+        selectCharacter.appendChild(opt);
+    }
 });
 
+document.getElementById("selectcharacter").addEventListener('change', () => {
 
+    let selectCharacter = document.getElementById("selectcharacter");
+    let characterSelected = selectCharacter.options[selectCharacter.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
+    
+    let character = rickandmorty.getCharacter(characterSelected)
+    document.getElementById("imagecharacter").src = character[0].image;
+    document.getElementById("namedetail").innerHTML = character[0].name;
+    document.getElementById("genderdetail").innerHTML = character[0].gender;
+    document.getElementById("stausdetail").innerHTML = character[0].status;
+    document.getElementById("origindetail").innerHTML = character[0].origin.name;
+    document.getElementById("speciedetail").innerHTML = character[0].species;
+    document.getElementById("typedetail").innerHTML = character[0].type;
+ 
+    document.getElementById("datapersonajes").style.display="flex";
+
+});

@@ -18,13 +18,13 @@ export const rickandmorty = {
     let speciesfilter = data.results.filter( //voy a filtrar la informacion que se encuentra en "results" de json en donde.....
       element => element.gender === gender // si el genero es exactamente igual al genero seleccionado, tome toda la informacion de ese genero
     );
-    let species = speciesfilter.map(
-      g => g.species
+    let species = speciesfilter.map(//.map crea un nuevo arreglo con las especies de los personajes que cumplan con la condicion anterior
+          g => g.species
     );
 
     let uniqueSpecies = [];
     for(let i=0; i<species.length; i++){
-      if(!uniqueSpecies.includes(species[i])){
+      if(! uniqueSpecies.includes(species[i] )){//si la especie que se encuentra en esa posición no se encuentra incluida en uniqueSpecies, incluyela
         uniqueSpecies.push(species[i]);
       }
     }
@@ -39,6 +39,7 @@ export const rickandmorty = {
     let status = statusfilter.map(
       g => g.status
     );
+    debugger;
 
     let uniqueStatus = [];
     for(let i=0; i<status.length; i++){
@@ -55,7 +56,7 @@ export const rickandmorty = {
                     element.species === species &&
                     element.status === status 
       );
-      let character = characterfilter.map(
+      let character = characterfilter.map(//extraigo todos los ID y nombres de personajes que cumplan con las condiciones anteriores
         g => {
          return {
            id: g.id,
@@ -63,7 +64,7 @@ export const rickandmorty = {
          }
         }
       );
-  
+
       let uniqueCharacter = [];
       for(let i=0; i<character.length; i++){
         if(!uniqueCharacter.includes(character[i])){
@@ -75,7 +76,7 @@ export const rickandmorty = {
 
 
 
-getCharacter: (id) =>{
+getCharacter: (id) =>{// extraigo el personaje por ID
   let characterfilter = data.results.filter( 
     element =>  element.id ==id);
   debugger;

@@ -2,29 +2,30 @@ import { rickandmorty } from './data.js';
 
 
 let selectGender = document.getElementById('selectgender'); //obtengo el elemento html con id selectgender
-let genders = rickandmorty.getGenders(); //extrae genders del json
+let genders = rickandmorty.getGenders(); //extrae genders de data.js (este archivo los extrae del json)
 
-for (let i = 0; i < genders.length; i++) {
-    let opt = document.createElement('option'); //crea elemento options por cada indice
+for (let i = 0; i < genders.length; i++) { //ocupo los genders extraidos del elemento getGenders
+    let opt = document.createElement('option'); //crea elemento options por cada uno de los generos 
     opt.value = genders[i];// se le agrega un valor ( value)
     opt.innerHTML = genders[i]; // agrega el texto de ese valor 
-    selectGender.appendChild(opt); // para agregarlo como hijo..... para que todos los valores que se vayan ingresando queden dentro del camco select
+    selectGender.appendChild(opt); // para agregarlo como hijo..... para que todos los valores que se vayan ingresando queden dentro del campo select
 }
 
 
 document.getElementById("selectgender").addEventListener('change', () => { //cada vez que cambia el valor del selectgender, ejecuta (change) lo siquiente
     let selectGender = document.getElementById('selectgender'); //obtengo el elemento html con id selectgender
     let genderSelected = selectGender.options[selectGender.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
+//obtengo el genero seleccionado
 
-    let selectSpecies = document.getElementById('selectspecies');
-    let species = rickandmorty.getSpecies(genderSelected);
+    let selectSpecies = document.getElementById('selectspecies');//obtener el elemento que luego voy a manipular
+    let species = rickandmorty.getSpecies(genderSelected);//obtengo las especies que sus personajes coincidan con el genero
 
-    selectSpecies.innerHTML = "";
-    let opt = document.createElement('option');
-    opt.innerHTML = "Seleccionar Especie";
-    opt.disabled = true;
-    opt.selected = true;
-    selectSpecies.appendChild(opt);
+    selectSpecies.innerHTML = "";//borro todas las opciones que haya  tenido la seleccion anterior 
+    let opt = document.createElement('option');//creo un elemento option 
+    opt.innerHTML = "Seleccionar Especie";//esa opcion le agrego un texto
+    opt.disabled = true;//esa opcion la desactivo
+    opt.selected = true;//pero lo muestro pero no se puede seleccionar 
+    selectSpecies.appendChild(opt);// se agrega 
 
     for (let i = 0; i < species.length; i++) {
         let opt = document.createElement('option');
@@ -34,13 +35,13 @@ document.getElementById("selectgender").addEventListener('change', () => { //cad
     }
 });
 
-document.getElementById("selectspecies").addEventListener('change', () => { //cada vez que cambia el valor del selectgender, ejecuta (change) lo siquiente
+document.getElementById("selectspecies").addEventListener('change', () => { //cada vez que cambia el valor del selectspecies, ejecuta (change) lo siquiente
 
-    let selectGender = document.getElementById('selectgender'); //obtengo el elemento html con id selectgender
-    let genderSelected = selectGender.options[selectGender.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
+    let selectGender = document.getElementById('selectgender'); 
+    let genderSelected = selectGender.options[selectGender.selectedIndex].value; 
 
-    let selectSpecies = document.getElementById('selectspecies'); //obtengo el elemento html con id selectgender
-    let speciesSelected = selectSpecies.options[selectSpecies.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
+    let selectSpecies = document.getElementById('selectspecies'); 
+    let speciesSelected = selectSpecies.options[selectSpecies.selectedIndex].value; 
 
     let selectStatus = document.getElementById('selectstatus');
     let status = rickandmorty.getStatus(genderSelected, speciesSelected);
@@ -60,16 +61,16 @@ document.getElementById("selectspecies").addEventListener('change', () => { //ca
     }
 });
 
-document.getElementById("selectstatus").addEventListener('change', () => { //cada vez que cambia el valor del selectgender, ejecuta (change) lo siquiente
+document.getElementById("selectstatus").addEventListener('change', () => { 
 
-    let selectGender = document.getElementById('selectgender'); //obtengo el elemento html con id selectgender
-    let genderSelected = selectGender.options[selectGender.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
+    let selectGender = document.getElementById('selectgender'); 
+    let genderSelected = selectGender.options[selectGender.selectedIndex].value; 
 
-    let selectSpecies = document.getElementById('selectspecies'); //obtengo el elemento html con id selectgender
-    let speciesSelected = selectSpecies.options[selectSpecies.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
+    let selectSpecies = document.getElementById('selectspecies'); 
+    let speciesSelected = selectSpecies.options[selectSpecies.selectedIndex].value; 
 
-    let selectStatus = document.getElementById('selectstatus'); //obtengo el elemento html con id selectgender
-    let statusSelected = selectStatus.options[selectStatus.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
+    let selectStatus = document.getElementById('selectstatus'); 
+    let statusSelected = selectStatus.options[selectStatus.selectedIndex].value; 
 
 
     let selectCharacter = document.getElementById('selectcharacter');
@@ -91,9 +92,9 @@ document.getElementById("selectstatus").addEventListener('change', () => { //cad
 
 document.getElementById("selectcharacter").addEventListener('change', () => {
 
-    let selectCharacter = document.getElementById("selectcharacter");
-    let characterSelected = selectCharacter.options[selectCharacter.selectedIndex].value; // obtengo todos los generos, de esos saco el seleccionado y le obtengo el valor
-    
+    let selectCharacter = document.getElementById("selectcharacter");//obtengo el campo
+    let characterSelected = selectCharacter.options[selectCharacter.selectedIndex].value;//para saber cual personaje se seleccionó en base a su valor (id)
+
     let character = rickandmorty.getCharacter(characterSelected)
     document.getElementById("imagecharacter").src = character[0].image;
     document.getElementById("namedetail").innerHTML = character[0].name;
@@ -103,6 +104,6 @@ document.getElementById("selectcharacter").addEventListener('change', () => {
     document.getElementById("speciedetail").innerHTML = character[0].species;
     document.getElementById("typedetail").innerHTML = character[0].type;
  
-    document.getElementById("datapersonajes").style.display="flex";
+    document.getElementById("datapersonajes").style.display="flex";// va a hacer que al momento de seleccionar un personaje el cuadro de descripcion aparezca ordenado con flexbox
 
 });

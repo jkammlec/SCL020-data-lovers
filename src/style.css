@@ -3,6 +3,7 @@
       width:  300px !important;
     }
   } */
+
 body {
     font-family: 'Roboto', sans-serif;
     background-image: url(./img/fondo2.png);
@@ -12,18 +13,20 @@ body {
     background-attachment: fixed;
     cursor: url('./img/cursor.cur'), auto;
 }
+
 .screen {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .title {
     width: 60%;
     padding: 10px;
 }
+
 .description {
-    width: 50%;
     height: 100%;
     background: #97CE4C;
     border-radius: 10px 10px 0px 0px;
@@ -31,8 +34,8 @@ body {
     font-size: 14px;
     box-shadow: inset 0 0 10px gray;
 }
+
 .body1 {
-    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -51,17 +54,21 @@ body {
     margin-bottom: 5%;
     margin-top: 5%;
 }
+
 .form {
     text-align: center;
     padding: 5%;
     text-shadow: 1px 1px 2px gray;
 }
+
 .divinput {
     line-height: 30px;
 }
+
 .imglogo {
     width: 100%;
 }
+
 .resume {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -71,13 +78,7 @@ body {
     text-align: justify;
     text-shadow: 2px 2px 2px gray;
 }
-.imagen {
-    width: 30%;
-    display: inline-table;
-    font-size: 15px;
-    width: 200px;
-    height: 200px
-}
+
 .detailcharacterselectd {
     width: 90%;
     height: 45%;
@@ -85,14 +86,10 @@ body {
     border-radius: 10px;
     margin-bottom: 5%;
     margin-top: 5%;
-    display: none; /*hace que se oculte el cuadro de descripcion */
+    display: none;
+    /*hace que se oculte el cuadro de descripcion */
     flex-wrap: wrap;
     justify-content: center;
-}
-.characterimage {
-    margin-top: 5%;
-    margin-left: 5%;
-
 }
 .detail {
     margin-top: 5%;
@@ -107,7 +104,7 @@ body {
     cursor: url('./img/cursor.cur'), auto;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 420px) {
     body {
         background-image: url(./img/fondomoviles.png);
     }
@@ -119,12 +116,29 @@ body {
         line-height: 20px;
     }
     #selectcharacter, #selectstatus, #selectgender, #selectspecies {
-        height: 15px;
-        width: 20%;
+        height: 30px;
+        width: 100%;
+    }
+    .description{
+        width: 90%;
+    }
+    .body1{
+        width: 90%;
+    }
+    .imagen {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 90%;
+    }
+
+    .characterimage {
+        margin-top: 5%;
     }
 }
 
-@media (min-width: 376px) and (max-width: 768px) {
+@media (min-width: 421px) and (max-width: 768px) {
     .resume {
         font-size: 12px;
     }
@@ -137,5 +151,25 @@ body {
     #selectcharacter, #selectstatus, #selectgender, #selectspecies {
         width: 20%;
         height: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .imagen {
+        display: inline-table;
+        font-size: 15px;
+        width: 200px;
+        height: 200px
+    }
+    .description{
+        width: 50%;
+    }
+    .body1{
+        width: 50%;
+    }
+    .characterimage {
+        margin-top: 5%;
+        margin-left: 5%;
+
     }
 }

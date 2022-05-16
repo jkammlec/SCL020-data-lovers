@@ -39,7 +39,6 @@ export const rickandmorty = {
     let status = statusfilter.map(
       g => g.status
     );
-    debugger;
 
     let uniqueStatus = [];
     for(let i=0; i<status.length; i++){
@@ -79,7 +78,6 @@ export const rickandmorty = {
 getCharacter: (id) =>{// extraigo el personaje por ID
   let characterfilter = data.results.filter( 
     element =>  element.id ==id);
-  debugger;
     return characterfilter;
 
 }                                                                  

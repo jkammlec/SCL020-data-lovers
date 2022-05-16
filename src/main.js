@@ -22,7 +22,7 @@ document.getElementById("selectgender").addEventListener('change', () => { //cad
 
     selectSpecies.innerHTML = "";//borro todas las opciones que haya  tenido la seleccion anterior 
     let opt = document.createElement('option');//creo un elemento option 
-    opt.innerHTML = "Seleccionar Especie";//esa opcion le agrego un texto
+    opt.innerHTML = "Select Species";//esa opcion le agrego un texto
     opt.disabled = true;//esa opcion la desactivo
     opt.selected = true;//pero lo muestro pero no se puede seleccionar 
     selectSpecies.appendChild(opt);// se agrega 
@@ -48,7 +48,7 @@ document.getElementById("selectspecies").addEventListener('change', () => { //ca
     selectStatus.innerHTML = "";
 
     let opt = document.createElement('option');
-    opt.innerHTML = "Seleccionar Estado de Vida";
+    opt.innerHTML = "Select State of life";
     opt.disabled = true;
     opt.selected = true;
     selectStatus.appendChild(opt);
@@ -78,7 +78,7 @@ document.getElementById("selectstatus").addEventListener('change', () => {
 
     selectCharacter.innerHTML = "";
     let opt = document.createElement('option');
-    opt.innerHTML = "Seleccionar Personaje";
+    opt.innerHTML = "Select a Character";
     opt.disabled = true;
     opt.selected = true;
     selectCharacter.appendChild(opt);

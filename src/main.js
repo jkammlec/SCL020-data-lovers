@@ -3,7 +3,6 @@ import { rickandmorty } from './data.js';
 
 let selectGender = document.getElementById('selectgender'); //obtengo el elemento html con id selectgender
 let genders = rickandmorty.getGenders(); //extrae genders de data.js (este archivo los extrae del json)
-
 for (let i = 0; i < genders.length; i++) { //ocupo los genders extraidos del elemento getGenders
     let opt = document.createElement('option'); //crea elemento options por cada uno de los generos 
     opt.value = genders[i];// se le agrega un valor ( value)
@@ -19,7 +18,6 @@ document.getElementById("selectgender").addEventListener('change', () => { //cad
 
     let selectSpecies = document.getElementById('selectspecies');//obtener el elemento que luego voy a manipular
     let species = rickandmorty.getSpecies(genderSelected);//obtengo las especies que sus personajes coincidan con el genero
-
     selectSpecies.innerHTML = "";//borro todas las opciones que haya  tenido la seleccion anterior 
     let opt = document.createElement('option');//creo un elemento option 
     opt.innerHTML = "Select Species";//esa opcion le agrego un texto
@@ -75,7 +73,6 @@ document.getElementById("selectstatus").addEventListener('change', () => {
 
     let selectCharacter = document.getElementById('selectcharacter');
     let character = rickandmorty.getCharacters(genderSelected, speciesSelected, statusSelected);
-
     selectCharacter.innerHTML = "";
     let opt = document.createElement('option');
     opt.innerHTML = "Select a Character";

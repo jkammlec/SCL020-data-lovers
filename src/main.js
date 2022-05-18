@@ -100,7 +100,13 @@ document.getElementById("selectcharacter").addEventListener('change', () => {
     document.getElementById("origindetail").innerHTML = character[0].origin.name;
     document.getElementById("speciedetail").innerHTML = character[0].species;
     document.getElementById("typedetail").innerHTML = character[0].type;
- 
+
+  let listchaptes = "";
+  character[0].episode.forEach(element => {
+    listchaptes = listchaptes + element.replace("https://rickandmortyapi.com/api/episode/" , "") + ", ";
+  });
+    document.getElementById("AllTheChapters").innerHTML = listchaptes.substring (0,listchaptes.length - 2);
+
     document.getElementById("datapersonajes").style.display="flex";// va a hacer que al momento de seleccionar un personaje el cuadro de descripcion aparezca ordenado con flexbox
 
 });

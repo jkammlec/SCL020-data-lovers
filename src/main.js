@@ -102,8 +102,8 @@ document.getElementById("selectcharacter").addEventListener('change', () => {
     document.getElementById("typedetail").innerHTML = character[0].type;
 
   let listchaptes = "";
-  character[0].episode.forEach(element => {
-    listchaptes = listchaptes + element.replace("https://rickandmortyapi.com/api/episode/" , "") + ", ";
+  character[0].episode.forEach(x => {
+    listchaptes = listchaptes + x.replace("https://rickandmortyapi.com/api/episode/" , "") + ", ";
   });
     document.getElementById("AllTheChapters").innerHTML = listchaptes.substring (0,listchaptes.length - 2);
 

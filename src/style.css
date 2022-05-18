@@ -121,9 +121,12 @@ body {
     margin-left: 5%;
     float: right;
     display: inline-table;
-    font-size: 14px;    
+    font-size: 14px;
+    padding-bottom: 2%;    
 }
-
+.imagen {
+    width: 100px;
+}
 
 #selectcharacter, #selectstatus, #selectgender, #selectspecies {
     cursor: url('./img/cursor.cur'), auto;
@@ -177,6 +180,9 @@ body {
         font-size: 13px;
         line-height: 25px;
     }
+    .imagen {
+        width: 80px;
+    }
 
     #selectcharacter, #selectstatus, #selectgender, #selectspecies {
         width: 40%;
@@ -200,6 +206,5 @@ body {
     .characterimage {
         margin-top: 5%;
         margin-left: 5%;
-
     }
 }

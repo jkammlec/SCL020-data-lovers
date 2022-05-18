@@ -25,12 +25,13 @@ body {
     background-size: 20px 20px;
     background-position:center;
     border-radius: 50%;
-    margin-top: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     border-style: groove;
     border-color: #0099CC;
     border-width: 1px;
     /*box-shadow: inset 0 0 4px gray;*/
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.16), 0 5px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.16);
     cursor: url('./img/cursor.cur'), auto;
 
 }
@@ -53,12 +54,12 @@ body {
     border-radius: 10px 10px 0px 0px;
     text-align: center;
     font-size: 14px;
-    box-shadow: inset 0 0 10px gray;
+    box-shadow: inset 0 0 5px gray;
     padding: 0;
 }
 
 .body1 {
-    height: 100%;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,28 +67,30 @@ body {
     background: #0099CC;
     padding-bottom: 2%;
     border-radius: 0px 0px 10px 10px;
-    box-shadow: inset 0 0 10px gray;
+    box-shadow: inset 0 0 5px gray;
+    font-size: 13px;
 }
 
 .filter {
     width: 90%;
-    height: 45%;
+    height: 35%;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     margin-top: 5%;
     padding: 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px gray;
 }
 
 .form {
     text-align: center;
-    padding: 5%;
-    text-shadow: 1px 1px 2px gray;
+    text-shadow: 1px 1px 1px gray;
 }
 
 .divinput {
-    line-height: 30px;
+    line-height: 25px;
     padding: 0;
-    font-size: 14px;
+    margin-top: 0;
 }
 
 .imglogo {
@@ -111,6 +114,7 @@ body {
     border-radius: 10px;
     margin-bottom: 5%;
     margin-top: 5%;
+    padding: 8px;
     display: none;
     /*hace que se oculte el cuadro de descripcion */
     flex-wrap: wrap;
@@ -126,6 +130,8 @@ body {
 }
 .imagen {
     width: 100px;
+    border-radius: 50%;
+    margin-top: 5px;
 }
 
 #selectcharacter, #selectstatus, #selectgender, #selectspecies {

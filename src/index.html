@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport"
@@ -12,23 +11,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <audio src="./audio/rickandmortyintro.mp3" autoplay loop></audio>
   <div class="screen">
     <div class="title">
       <img src="./img/logo.png" class="imglogo">
     </div>
-
     <div class="description">
       <p class="resume">Rick and Morty is an American adult animated science fiction sitcom created by Justin Roiland
         and Dan Harmon for Cartoon Network's nighttime programming block Adult Swim. The series follows the
         misadventures of cynical mad scientist Rick Sanchez and his good-hearted, but fretful grandson Morty Smith, who
         split their time between domestic life and interdimensional adventures.</p>
     </div>
-
     <div class="body1">
-
       <div class="filter">
         <div class="form">
           <div class="divinput">
@@ -37,23 +32,18 @@
               <option selected="selected" disabled>Select Gender</option>
             </select>
           </div>
-
           <div class="divinput">
             <label id="species">Species:</label>
             <select id="selectspecies" value="">
               <option selected="selected" disabled>Select Species</option>
-
             </select>
           </div>
-
           <div class="divinput">
             <label id="status"> State of life:</label>
             <select id="selectstatus" value="">
               <option selected="selected" disabled>Select State of life</option>
-
             </select>
           </div>
-
           <div class="divinput">
             <label id="character">Character: </label>
             <select id="selectcharacter" value="">
@@ -62,47 +52,36 @@
           </div>
           <input type="button" class="btn" onclick="location.reload()" />
         </div>
-
       </div>
-
       <div id="datapersonajes" class="detailcharacterselectd">
-
         <div class="characterimage">
           <img id="imagecharacter" class="imagen">
         </div>
-
         <div class="detail">
           <div class="divinput">
             <label class="form">Name: </label>
             <label id="namedetail"></label>
-
           </div>
-
           <div class="divinput">
             <label class="form">Gender: </label>
             <label id="genderdetail"></label>
           </div>
-
           <div class="divinput">
             <label class="form">Status: </label>
             <label id="stausdetail"></label>
           </div>
-
           <div class="divinput">
             <label class="form">Origin: </label>
             <label id="origindetail"></label>
           </div>
-
           <div class="divinput">
             <label class="form">Species: </label>
             <label id="speciedetail"></label>
           </div>
-
           <div class="divinput">
             <label class="form">Type: </label>
             <label id="typedetail"></label>
           </div>
-
           <div class="divinput">
             <label class="form">Chapters: </label>
             <label id="AllTheChapters"></label>

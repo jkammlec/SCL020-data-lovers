@@ -1,4 +1,3 @@
-import { it } from 'eslint/lib/rule-tester/rule-tester';
 import { rickandmorty } from '../src/data.js';
 
 describe('Genders', () => {

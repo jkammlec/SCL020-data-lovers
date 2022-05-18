@@ -87,6 +87,7 @@ body {
 .divinput {
     line-height: 30px;
     padding: 0;
+    font-size: 14px;
 }
 
 .imglogo {
@@ -120,7 +121,7 @@ body {
     margin-left: 5%;
     float: right;
     display: inline-table;
-    font-size: 15px;
+    font-size: 14px;    
 }
 
 

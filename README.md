@@ -17,4 +17,6 @@ Hicimos un prototipo de diseño que se adecuara a esta idea preconcebida. Primer
 El resultado final fue el siguiente, permitiendo al usuario filtrar desde el género las siguientes características para elegir un personaje. Como la data está en inglés, se dejó todo el texto y menú en inglés.
 
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/26625809/169324191-22c7b86b-d30d-4143-8887-e2c6477c42b4.png">
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/26625809/169324745-22db9409-ae41-4bba-b3ea-042e360f400b.png">
+
 

@@ -20,3 +20,9 @@ El resultado final fue el siguiente, permitiendo al usuario filtrar desde el gé
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/26625809/169324745-22db9409-ae41-4bba-b3ea-042e360f400b.png">
 
 
+El diseño además es responsivo, se adapta a diferentes tamaños de pantalla, como smartphones y tablets.
+
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/26625809/169330963-154b9f3c-3104-471b-a1d2-fd676f05e452.png">
+
+
+

@@ -13,3 +13,6 @@ Hicimos un prototipo de diseño que se adecuara a esta idea preconcebida. Primer
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/26625809/168095187-20b0f94c-0a7f-4ef5-b39f-ae927e2544c5.png">
 
+
+El resultado final fue el siguiente, permitiendo al usuario filtrar desde el género las siguientes características para elegir un personaje. Como la data está en inglés, se dejó todo el texto y menú en inglés.
+

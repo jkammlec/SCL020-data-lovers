@@ -73,8 +73,6 @@ export const rickandmorty = {
       return uniqueCharacter.sort();
       },
 
-
-
 getCharacter: (id) =>{// extraigo el personaje por ID
   let characterfilter = data.results.filter( 
     element =>  element.id ==id);
